@@ -14,18 +14,51 @@ This repository contains the source code and documentation for our project, whic
 - **Classification:** There are 6 classification models that can be used to classify annotated data. Optional: ground truth and predicted labels can be overlaid on whole slide images.
 - **Clustering:** There are 3 clustering models that can be used to experiment the dataset with supervised and unsupervised clustering. Optional: clusters can be overlaid on whole slide images.
 
+
+## Data Preprocessing
+The code for data preprocessing is located under the 'Data Preprocessing' directory. It includes scripts for segmenting patches from original whole slide images and pairing the counts with inflammatory levels.
+
+## Feature Extraction
+In the Feature Extraction directory, you'll find code for extracting features using ResNet50 and [PLIP (Pathology Language and Image Pre-Training)](https://github.com/PathologyFoundation/plip.git). This process is crucial for preparing the data for subsequent model training.
+
+## Models Used
+- [HoVer-Net Model](https://github.com/vqdang/hover_net.git): Utilized with weights trained on the [MoNuSAC](https://monusac-2020.grand-challenge.org) dataset for precise nuclear segmentation.
+- [Set Transformer](https://github.com/juho-lee/set_transformer.git): Employed for its advanced handling of set-based data, benefiting from its self-attention mechanism.
+
+Due to licensing restrictions, we cannot include detailed information about the models used. Please refer to the original repository for further details.
+
 ## Installation
 To set up this project, follow these steps:
 1. Clone the repository:
 
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/yourproject.git
+```
+2. Install required dependencies:
+
+```bash
+pip install -r hover_net/requirements.txt
+```
+
+## Usage
+To run the project, execute the following command:
+
+```python
+python hover_net/run_tile.py
+```
 
 
 
-The codes for data preprocessing is under the 'Data Preprocessing' directory, including how to segment patches from the original whole slide image, how to pair the counts with inflammtory levels.
 
-In Feature Extraction, you will find the code for extracting features from ResNet50 and [PLIP (Pathology Language and Image Pre-Training)](https://github.com/PathologyFoundation/plip.git).
 
-We also used [HoVer-Net model](https://github.com/vqdang/hover_net.git) with weights trained on [MoNuSAC](https://monusac-2020.grand-challenge.org) dataset and [Set Transformer](https://github.com/juho-lee/set_transformer.git) in this project.
+
+
+
+
+
+
+
 
 
 
