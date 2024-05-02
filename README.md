@@ -2,12 +2,17 @@
 
 ## Overview
 ### Automated Evaluation of Lung Histology Inflammation Scoring Using Deep Neural Networks
-This repository contains the source code and documentation for our project, which focuses on applying deep learning techniques to analyze medical imaging data. The project utilizes advanced neural network models like ResNet50 and PLIP for feature extraction and employs architectures such as Set Transformer and Deep Sets for further analysis.
+This repository contains the source code and documentation for our project, which focuses on applying deep learning techniques to analyze medical imaging data, specifically on whole slide images of lung tissue. The project utilizes advanced neural network models:
+- HoVer-Net = nuclear segmentation and classification
+- ResNet50 and PLIP = feature extraction
+- Set Transformer and Deep Sets = analysis on extracted features
 
 ## Features
-- **ResNet50 and PLIP Integration:** Utilizes these models to extract meaningful features from pathology images.
+- **ResNet50 and PLIP Integration:** Utilizes these models to extract meaningful features from pathology images of lung tissues.
 - **Set Transformer and Deep Sets:** Analyzes sets of features to predict outcomes accurately.
 - **Class Balancing Techniques:** Implements methods to handle imbalanced data, improving the robustness of the model.
+- **Classification:** There are 6 classification models that can be used to classify annotated data. Optional: ground truth and predicted labels can be overlaid on whole slide images.
+- **Clustering:** There are 3 clustering models that can be used to experiment the dataset with supervised and unsupervised clustering. Optional: clusters can be overlaid on whole slide images.
 
 ## Installation
 To set up this project, follow these steps:
